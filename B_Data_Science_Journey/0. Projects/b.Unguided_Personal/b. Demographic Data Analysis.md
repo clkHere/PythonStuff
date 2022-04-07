@@ -32,4 +32,41 @@ I'm given a dataset of demographic data that was extracted from the 1994 Census 
 
 <h5> 4. Store cleaned data in new DataFrame </h5>
 
+```python
+def calculate_demographic_data(print_data=True):
+  #Read data from file
+  df = None
+```
 <h5> 5. Systematically answer each prompt with appropriate DataFrame filtering and storage </h5>
+
+```python
+#How many people of each race are represented in this dataset? 
+#This should be a Pandas series with race names as the index labels. (race column)
+race_count = None
+
+#What is the average age of men?
+average_age_men = None
+
+# What is the percentage of people who have a Bachelor's degree?
+percentage_bachelors = None
+
+# What percentage of people with advanced education (Bachelors, Masters, or Doctorate) make more than 50K?
+higher_education = None
+
+# What percentage of people without advanced education make more than 50K?
+lower_edcuation = None
+
+# What is the minimum number of hours a person works per week?
+min_work_hours = None
+
+# What percentage of the people who work the minimum number of hours per week have a salary of more than 50K?
+num_min_workers = None
+rich_percentage = None
+
+# What country has the highest percentage of people that earn >50K and what is that percentage?
+highest_earning_country = None
+highest_earning_country_percentage = None
+
+# Identify the most popular occupation for those who earn >50K in India.
+top_IN_occupation = None
+```
