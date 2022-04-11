@@ -17,7 +17,7 @@
                 break                   # Stop and go to next    
     return -1, -1                       # If neither, then nothing found. 
   
-  #FASTER CODE: (Passes all exams)
+  #FASTER CODE: (Passed the inital 5 exams. Scored 50% overall 😢)
   def solution(a, t_Num):
     rBeg = rEnd = 0
     
