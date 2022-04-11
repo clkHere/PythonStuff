@@ -1,9 +1,9 @@
   '''
-  My inital code - a brute force checker - took too long to run, which was an edge case for the hidden cases.
-  It would pass the first three cases, but fail the last two. 
+  My inital code - a brute force checker - took too long to run, which failed the hidden edge cases. 
   
   So, I had to rework it to get a faster, more linear runtime. 
-  See below
+  
+  The difference in code is minimal; however, the use of a generator and while-loop drastically improved performance.
   '''
   #ORIGINAL CODE:  
   def solution(a, t_Num):
