@@ -4,15 +4,15 @@
 The purpose of this project is to develop the actors, behavior, and conditions to run simulated outcomes for a game of Rock-Paper-Scissors. 
 
 <h2>Modeling</h2>
-I'll start by modeling our <b>Phases</b>, <b>actors</b>, <b>behaviors</b>, and <b>data</b>:<br></br>
+I'll start by modeling our <b>Phases</b>, <b>actors</b>, <b>behaviors</b>, and <b>data</b> to derive our methods:<br></br>
 
-Phase | Actor | Behavior | Data
-|:---|:---|:---|:---|
-Input | Participant | Chooses Symbol | Symbol saved as <i>choice</i> on Participant(choice) | 
-Processing | GameRound | Compares choices against game rules. | <i>Result</i> inspected | 
-Processing | GameRound | Awards points based on result value | <i>Points</i> added to weiing Participant(point) | 
-Processing | Game | Check "continue?" answer | If TRUE, continue, else quit | 
-Output | Game | New game round or game end credit | collect answer
+Phase | Actor | Behavior | Data | Method
+|:---|:---|:---|:---|:---|
+Input | Participant | Chooses Symbol | Symbol saved as <i>choice</i> on Participant(choice) | choose() |
+Processing | GameRound | Compares choices against game rules. | <i>Result</i> inspected | compareChoices | 
+Processing | GameRound | Awards points based on result value | <i>Points</i> added to weiing Participant(point) | awardPoints() |
+Processing | Game | Check "continue?" answer | If TRUE, continue, else quit | checkEndCondition() | 
+Output | Game | New game round or game end credit | determine winner/continue (y/n) | determineWinner()
 
 This allows me to guide my code development and account for any changes to method and attribute declarations in the programming. 
 
