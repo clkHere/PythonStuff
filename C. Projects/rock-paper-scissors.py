@@ -1,6 +1,7 @@
+#Class
 class Participant:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, name): #Method
+        self.name = name #Attribute
         self.points = 0
         self.choice = ""
     def choose(self):
