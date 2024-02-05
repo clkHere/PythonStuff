@@ -5,8 +5,8 @@ class Participant:
         self.points = 0
         self.choice = ""
     def choose(self):
-        self.choice = input("{name}, select rock, paper or scissor: ".format(name=self.name))
-        print("{name} selects {choice}".format(name=self.name, choice=self.choice))
+        self.choice = input("\n{name}, select rock, paper or scissor: ".format(name=self.name))
+        print("\n{name} selects {choice}".format(name=self.name, choice=self.choice))
     def toNumericalChoice(self):
         switcher = {
             "rock": 0,
@@ -42,15 +42,15 @@ class GameRound:
         res = {
             0: "draw",
             1: "win",
-            -1: "loss
+            -1: "loss"
         }
         return res[result]
 
 class Game:
     def __init__(self):
         self.endGame = False
-        self.participant = Participant("Player 1")
-        self.secondParticipant = Participant("Player 2")
+        self.participant = Participant(input("Player 1: enter your name: "))
+        self.secondParticipant = Participant(input("Player 2: enter your name:"))
     def start(self):
         while not self.endGame:
             GameRound(self.participant, self.secondParticipant)
@@ -61,7 +61,7 @@ class Game:
             GameRound(self.participant, self.secondParticipant)
             self.checkEndCondition()
         else:
-            print("Game ended, {p1name} has {p1points}, and {p2name} had {p2points}".format(p1name=self.participant.name, p1points=self.participant.points, p2name=self.secondParticipant.name, p2points=self.secondParticipant.points))
+            print("Game ended, {p1name} has {p1points} point(s), and {p2name} had {p2points} point(s)".format(p1name=self.participant.name, p1points=self.participant.points, p2name=self.secondParticipant.name, p2points=self.secondParticipant.points))
             self.determineWinner()
             self.endGame = True
     def determineWinner(self):
